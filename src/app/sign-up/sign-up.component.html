@@ -1,0 +1,9 @@
+<form>
+  <label for="email">Email:</label>
+  <input type="text" class="form-control" #newEmail required>
+
+  <label for="password">Password:</label>
+  <input type="text" class="form-control" #newPassword required>
+
+  <button (click)="submitSignUpForm(newEmail.value, newPassword.value); newEmail.value=''; newPassword.value='';" type="button" name="button">Submit</button>
+</form>
