@@ -24,6 +24,7 @@ export class AuthenticationService {
       let errorCode = error;
       let errorMessage = error.message;
     });
+
   }
 
 }

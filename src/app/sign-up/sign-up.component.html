@@ -1,9 +1,15 @@
 <form>
+  <label for="email">First Name:</label>
+  <input type="text" class="form-control" #newFirstName required>
+
+  <label for="email">Last Name:</label>
+  <input type="text" class="form-control" #newLastName required>
+
   <label for="email">Email:</label>
   <input type="text" class="form-control" #newEmail required>
 
   <label for="password">Password:</label>
   <input type="text" class="form-control" #newPassword required>
 
-  <button (click)="submitSignUpForm(newEmail.value, newPassword.value); newEmail.value=''; newPassword.value='';" type="button" name="button">Submit</button>
+  <button (click)="submitSignUpForm(newEmail.value, newPassword.value); newEmail.value=''; newPassword.value='';" (click)="assignUserName(newFirstName.value, newLastName.value);newFirstName.value=''; newLastName.value='';" type="button" name="button">Submit</button>
 </form>

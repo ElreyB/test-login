@@ -15,14 +15,21 @@ import { Location } from "@angular/common";
   providers: [AuthenticationService]
 })
 export class SignUpComponent implements OnInit {
+  user: Observable<firebase.User>;
 
-  constructor(public authService: AuthenticationService, private route: ActivatedRoute, private location: Location,) { }
+  constructor(public authService: AuthenticationService, private route: ActivatedRoute, private location: Location,public afAuth: AngularFireAuth) {
+    this.user = afAuth.authState;
+  }
 
   ngOnInit() {
   }
 
   submitSignUpForm(email: string, password: string) {
     this.authService.createUser(email, password);
+  }
+
+  assignUserName(firstName: string, lastName: string) {
+
   }
 
 }
