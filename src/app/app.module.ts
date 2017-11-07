@@ -1,16 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { masterFirebaseConfig } from './api-keys';
-import { routing } from './app.routing';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpModule } from "@angular/http";
+import { AngularFireModule } from "angularfire2";
+import { AngularFireDatabaseModule } from "angularfire2/database";
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { masterFirebaseConfig } from "./api-keys";
+import { routing } from "./app.routing";
 
-import { AppComponent } from './app.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { AppComponent } from "./app.component";
+import { SignUpComponent } from "./sign-up/sign-up.component";
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -20,12 +19,8 @@ export const firebaseConfig = {
   messagingSenderId: masterFirebaseConfig.messagingSenderId
 };
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignUpComponent
-  ],
+  declarations: [AppComponent, SignUpComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -38,4 +33,4 @@ export const firebaseConfig = {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
